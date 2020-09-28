@@ -1,0 +1,87 @@
+// Place all the styles related to the results controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+//////////////
+.form_container{
+  width:75%;
+  background-color: rgba(221, 206, 222, 0.2);
+  margin: auto;
+  padding: 50px;
+  border:1px solid black;
+  border-radius: 5px;
+}
+.input_team,.input_goalkeeper,.input_defender,.input_Midfielder,.input_Striker{
+
+  width:50%;
+  position:relative;
+
+}
+
+.b,.r_team,.r_goal,.r_def,.r_mid,.r_striker{
+  position:absolute;
+   right:15%;
+}
+
+
+
+span{
+  display: inline-block;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+ img{
+  width:50px;
+  height:40px;
+  border-radius:40px
+}
+
+h3{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom:10px;
+}
+
+/////////////////
+.percentage{
+  position: absolute;
+  right:10%;
+  font-weight:500;
+
+}
+.team > .percentage{
+  position:absolute;
+  left:50%;
+  font-weight:500;
+
+}
+.result_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 20px;
+  grid-column-gap: 5px;
+}
+.team,.goalkeeper,.defender,.Midfielder,.Striker{
+  position: relative;
+  background-color: rgba(210, 211, 254, 0.5);
+}
+.team{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  position:relative;
+  height: 400px;
+  overflow-y: scroll;
+}
+.team>progress{
+position:absolute;
+left:350px;
+}
+
+progress{
+  width: 250px;
+  height: 30px;
+  position:absolute;
+  right: 170px;
+
+}

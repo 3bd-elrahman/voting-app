@@ -1,0 +1,77 @@
+
+<div class="form_container">
+  <%= form_for (@result) do |f| %>
+  <%= f.text_field :name,placeholder:"Enter your name",class:"form-control" ,id:'name'%><br>
+<div class="form-group">
+  <span>Select Your country</span> <%=f.select :country ,["Egypt","KSA","Lenbnon","Libya","Morocco","Algeria",
+  "tunis","Sudan","syria","Jordon","UAE","Qatar","kuwait","Iraq","Palestine","Yemen","oman","Bahrin"],{},id:"country"%>
+</div>
+
+<div class="input_team form-group" style="border-bottom:1px solid black">
+  <h3>your favorite team:</h3>
+
+<span><%= image_tag('manu.jpg') %> Man U.</span> <%=f.radio_button :team ,"Man U.",class:"r_team" %>  <br>
+<span><%= image_tag('liverpool.png') %>LiverPool</span>   <%=f.radio_button :team ,"LiverPool",class:"r_team" %><br>
+<span><%= image_tag('milan.png') %>Milan</span>   <%=f.radio_button :team ,"Milan",class:"r_team" %><br>
+<span><%= image_tag('ahly.png') %>Ahly Egy</span>   <%=f.radio_button :team ,"Ahly Egy",class:"r_team"%><br>
+<span><%= image_tag('zamalek.png') %>Zamalek Sc</span> <%=f.radio_button :team ,"Zamalek Sc",class:"r_team" %><br>
+<span><%= image_tag('taraji.png') %>Taraji</span>     <%=f.radio_button :team ,"Taraji",class:"r_team" %><br>
+<span><%= image_tag('wydad.png') %>Wydad</span>      <%=f.radio_button :team ,"Wydad",class:"r_team" %><br>
+<span><%= image_tag('raja.png') %>Raja</span>       <%=f.radio_button :team ,"Raja",class:"r_team" %><br>
+<span><%= image_tag('sudan.jpg') %>Alhilal Sudanese</span>    <%=f.radio_button :team ,"Alhilal Sudanese",class:"r_team" %><br>
+ <span><%= image_tag('etoile.jpg') %>Étoile Sportive De Sahel</span>    <%=f.radio_button :team ,"Étoile Sportive De Sahel",class:"r_team" %><br>
+<span><%= image_tag('barcelona.jpg') %>Barcelona</span>    <%=f.radio_button :team ,"Barcelona",class:"r_team"%><br>
+<span><%= image_tag('Real.png') %>R.madrid</span><%=f.radio_button :team ,"R.madrid",class:"r_team" %><br>
+<span><%= image_tag('elhelal.jpg') %>Elhelal KSA</span>    <%=f.radio_button :team ,"Elhelal KSA",class:"r_team" %><br>
+</div>
+
+<div class="input_goalkeeper form-group" style="border-bottom:1px solid black">
+  <h3>Your Favorite goalkeeper</h3>
+  <span><%= image_tag('khan.jpg') %>OLiver Kan <%=f.radio_button :goal_keeper ,"OLiver Kan",class:"r_goal" %></span><br>
+  <span><%= image_tag('dida.jpg') %>Dida  <%=f.radio_button :goal_keeper ,"Dida",class:"r_goal" %></span><br>
+  <span><%= image_tag('buffon.gif') %>Buffon   <%=f.radio_button :goal_keeper ,"Buffon",class:"r_goal" %></span><br>
+  <span><%= image_tag('casillias.jpg') %>Casillas   <%=f.radio_button :goal_keeper ,"Casillas",class:"r_goal" %></span><br>
+  <span><%= image_tag('vandersar.jpg') %>van der sar   <%=f.radio_button :goal_keeper ,"van der sar",class:"r_goal" %></span><br>
+  <span><%= image_tag('bartez.jpg') %>Fabien Barthez<%=f.radio_button :goal_keeper ,"Fabien Barthez",class:"r_goal" %></span><br>
+
+</div>
+<div class="input_defender form-group" style="border-bottom:1px solid black">
+  <h3>Your Favorite Defender</h3>
+  <span><%= image_tag('puyol.jpg') %>puyol</span>   <%=f.radio_button :defender ,"puyol",class:"r_def" %><br>
+  <span><%= image_tag('ramos.jpg') %>Sergio Ramos</span>   <%=f.radio_button :defender ,"Sergio Ramos",class:"r_def" %><br>
+  <span><%= image_tag('maldini.png') %>Maldini</span>   <%=f.radio_button :defender ,"maldini",class:"r_def" %><br>
+  <span><%= image_tag('nesta.jpg') %>Nesta</span>   <%=f.radio_button :defender ,"nesta",class:"r_def" %><br>
+  <span><%= image_tag('cannavaro.gif') %>Cannavaro</span>   <%=f.radio_button :defender ,"Cannavaro",class:"r_def" %><br>
+  <span id="check_def"> check</span>
+
+</div>
+
+<div class="input_Midfielder form-group" style="border-bottom:1px solid black">
+  <h3>Your Favorite Midfielder</h3>
+  <span><%= image_tag('xavi.jpg') %>Xavi</span>   <%=f.radio_button :midfielder ,"Xavi",class:"r_mid" %><br>
+  <span><%= image_tag('perlo.jpg') %>Perlo</span>   <%=f.radio_button :midfielder ,"Perlo",class:"r_mid" %><br>
+  <span><%= image_tag('ballack.jpg') %>Michael Ballack</span>   <%=f.radio_button :midfielder ,"michael Ballack",class:"r_mid" %><br>
+  <span><%= image_tag('inesta.jpg') %>Inesta</span>   <%=f.radio_button :midfielder ,"Inesta",class:"r_mid" %><br>
+  <span><%= image_tag('alonso.jpg') %>Xabi Alons</span>   <%=f.radio_button :midfielder ,"Xabi Alonso",class:"r_mid" %><br>
+  <span><%= image_tag('luca.jpg') %>Luca Modric</span>   <%=f.radio_button :midfielder ,"Luca Modric",class:"r_mid" %><br>
+
+</div>
+
+<div class="input_Striker form-group">
+  <h3>Your Favorite Striker</h3>
+  <span><%= image_tag('ronaldo.jpg') %>Ronaldo</span>   <%=f.radio_button :striker ,"Ronaldo",class:"r_striker" %><br>
+  <span><%= image_tag('suarez.gif') %>suarez</span>   <%=f.radio_button :striker ,"suarez",class:"r_striker" %><br>
+  <span><%= image_tag('Klosa.jpg') %>Klose</span>   <%=f.radio_button :striker ,"Klose",class:"r_striker" %><br>
+  <span><%= image_tag('etoo.jpg') %>Etoo</span>   <%=f.radio_button :striker ,"Etoo",class:"r_striker" %><br>
+  <span><%= image_tag('villa.jpg') %>Villa</span>   <%=f.radio_button :striker ,"Villa",class:"r_striker"%><br>
+
+</div>
+<div class="form-group">
+  <%= f.submit "Vote",class:"btn btn-primary active",id:"btn_vote" %>
+
+</div>
+
+  <% end %>
+  <%= link_to "Results",results_index_path() %>
+</div>
+<%= javascript_pack_tag "myjs" %>

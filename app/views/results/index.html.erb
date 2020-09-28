@@ -1,0 +1,91 @@
+<!-- calculate Results -->
+<% zamalek=((@result.where(:team=>"Zamalek Sc").count/@result.count.to_f)*100).round(2)%>
+<% liverpool=((@result.where(:team=>"LiverPool").count/@result.count.to_f)*100).round(2)%>
+<% manu=((@result.where(:team=>"Man U.").count/@result.count.to_f)*100).round(2)%>
+<% milan=((@result.where(:team=>"Milan").count/@result.count.to_f)*100).round(2)%>
+<% ahly=((@result.where(:team=>"Ahly Egy").count/@result.count.to_f)*100).round(2)%>
+<% taraji=((@result.where(:team=>"Taraji").count/@result.count.to_f)*100).round(2)%>
+<% wydad=((@result.where(:team=>"Wydad").count/@result.count.to_f)*100).round(2)%>
+<% raja=((@result.where(:team=>"Raja").count/@result.count.to_f)*100).round(2)%>
+<% alhilal_Sudanese=((@result.where(:team=>"Alhilal Sudanese").count/@result.count.to_f)*100).round(2)%>
+<% barcelona=((@result.where(:team=>"Barcelona").count/@result.count.to_f)*100).round(2)%>
+<% etoile=((@result.where(:team=>"Étoile Sportive De Sahel").count/@result.count.to_f)*100).round(2)%>
+<% r_madrid=((@result.where(:team=>"R.madrid").count/@result.count.to_f)*100).round(2)%>
+<% elhelal_KSA=((@result.where(:team=>"Elhelal KSA").count/@result.count.to_f)*100).round(2)%>
+
+<% kan=((@result.where(:goal_keeper=>"Oliver Kan").count/@result.count.to_f)*100).round(2)%>
+<% dida=((@result.where(:goal_keeper=>"Dida").count/@result.count.to_f)*100).round(2)%>
+<% buffon=((@result.where(:goal_keeper=>"Buffon").count/@result.count.to_f)*100).round(2)%>
+<% casillas=((@result.where(:goal_keeper=>"Casillas").count/@result.count.to_f)*100).round(2)%>
+<% van_der_sar=((@result.where(:goal_keeper=>"van der sar").count/@result.count.to_f)*100).round(2)%>
+<% bartez=((@result.where(:goal_keeper=>"Fabien Barthez").count/@result.count.to_f)*100).round(2)%>
+
+
+<% puyol=((@result.where(:defender=>"puyol").count/@result.count.to_f)*100).round(2)%>
+<% ramos=((@result.where(:defender=>"Sergio Ramos").count/@result.count.to_f)*100).round(2)%>
+<% maldini=((@result.where(:defender=>"Maldini").count/@result.count.to_f)*100).round(2)%>
+<% nesta=((@result.where(:defender=>"Nesta").count/@result.count.to_f)*100).round(2)%>
+<% cannavaro=((@result.where(:defender=>"Cannavaro").count/@result.count.to_f)*100).round(2)%>
+
+<% xavi=((@result.where(:Midfielder=>"Xavi").count/@result.count.to_f)*100).round(2)%>
+<% perlo=((@result.where(:Midfielder=>"Perlo").count/@result.count.to_f)*100).round(2)%>
+<% ballack=((@result.where(:Midfielder=>"michael Ballack").count/@result.count.to_f)*100).round(2)%>
+<% inesta=((@result.where(:Midfielder=>"Inesta").count/@result.count.to_f)*100).round(2)%>
+<% alonso=((@result.where(:Midfielder=>"Xabi Alonso").count/@result.count.to_f)*100).round(2)%>
+<% modric=((@result.where(:Midfielder=>"Luca Modric").count/@result.count.to_f)*100).round(2)%>
+
+<% ronaldo=((@result.where(:striker=>"Ronaldo").count/@result.count.to_f)*100).round(2) %>
+<% suarez= ((@result.where(:striker=>"suarez").count/@result.count.to_f)*100).round(2) %>
+<% klose=((@result.where(:striker=>"Klose").count/@result.count.to_f)*100).round(2) %>
+<% etoo=((@result.where(:striker=>"Etoo").count/@result.count.to_f)*100).round(2) %>
+<%villa= ((@result.where(:striker=>"Villa").count/@result.count.to_f)*100).round(2) %>
+
+<div class="result_container">
+<div class="team">
+<span><%= image_tag('manu.jpg') %> Man U.</span> <progress value="<%= manu %>" max="100"><%= manu %></progress><span class="percentage"><%= manu %>%</span><br>
+<span><%= image_tag('liverpool.png') %>LiverPool</span> <progress value="<%= liverpool %>" max="100"></progress><span class="percentage"><%= liverpool %>%</span><br>
+<span><%= image_tag('milan.png') %>Milan</span> <progress value="<%=milan %>" max="100"></progress><span class="percentage"><%=milan %>%</span><br>
+<span><%= image_tag('ahly.png') %>Ahly Egy</span> <progress value="<%=ahly %>" max="100"></progress><span class="percentage"><%=ahly %>%</span><br>
+<span><%= image_tag('zamalek.png') %>Zamalek Sc</span> <progress value="<%= zamalek %>" max="100"></progress ><span class="percentage"><%=zamalek%>%</span><br>
+<span><%= image_tag('taraji.png') %>Taraji</span> <progress value="<%=taraji%>" max="100"></progress><span class="percentage"><%=taraji%>%</span><br>
+<span><%= image_tag('wydad.png') %>Wydad</span> <progress value="<%=wydad%>" max="100"></progress><span class="percentage"><%=wydad%>%</span><br>
+<span><%= image_tag('raja.png') %>Raja</span> <progress value="<%=raja %>" max="100"></progress><span class="percentage"><%=raja%>%</span><br>
+<span><%= image_tag('sudan.jpg') %>Alhilal Sudanese</span> <progress value="<%=alhilal_Sudanese %>" max="100"></progress><span class="percentage"><%=alhilal_Sudanese%>%</span><br>
+<span><%= image_tag('etoile.jpg') %>Étoile Sportive De Sahel</span> <progress value="<%= etoile %>" max="100"></progress><span class="percentage"><%=etoile%>%</span><br>
+<span><%= image_tag('barcelona.jpg') %>Barcelona</span> <progress value="<%= barcelona %>" max="100"></progress><span class="percentage"><%=barcelona%>%</span><br>
+<span><%= image_tag('Real.png') %>R.madrid</span> <progress value="<%=r_madrid %>" max="100"></progress><span class="percentage"><%=r_madrid%>%</span><br>
+<span><%= image_tag('elhelal.jpg') %>Elhelal KSA</span> <progress value="<%=elhelal_KSA %>" max="100"></progress><span class="percentage"><%=elhelal_KSA%>%</span><br>
+
+</div>
+<div class="goalkeeper">
+<span><%= image_tag('khan.jpg') %>Oliver Kan</span> <progress value="<%= kan%>" max="100"></progress><span class="percentage"><%=kan%>%</span><br>
+  <span><%= image_tag('dida.jpg') %> Dida</span> <progress value="<%= dida %>" max="100"></progress><span class="percentage"><%=dida%>%</span><br>
+  <span><%= image_tag('buffon.gif') %>Buffon</span> <progress value="<%= buffon %>" max="100"></progress><span class="percentage"><%=buffon%>%</span><br>
+  <span><%= image_tag('casillias.jpg') %>Casillas</span> <progress value="<%= casillas %>" max="100"></progress><span class="percentage"><%=casillas%>%</span><br>
+  <span><%= image_tag('vandersar.jpg') %>van der sar</span> <progress value="<%= van_der_sar%>" max="100"></progress><span class="percentage"><%=van_der_sar%>%</span><br>
+  <span><%= image_tag('bartez.jpg') %>Fabien Barthez</span> <progress value="<%= bartez %>" max="100"></progress><span class="percentage"><%=bartez%>%</span><br>
+</div>
+<div class="defender">
+<span><%= image_tag('puyol.jpg') %>puyol</span> <progress value="<%=puyol %>" max="100"></progress><span class="percentage"><%=puyol%>%</span><br>
+<span><%= image_tag('ramos.jpg') %>Sergio Ramos</span> <progress value="<%=ramos %>" max="100"></progress><span class="percentage"><%=ramos%>%</span><br>
+<span><%= image_tag('maldini.png') %>Maldini</span> <progress value="<%=maldini %>" max="100"></progress><span class="percentage"><%=maldini%>%</span><br>
+<span><%= image_tag('nesta.jpg') %>Nesta</span> <progress value="<%=nesta %>" max="100"></progress><span class="percentage"><%=nesta%>%</span><br>
+<span><%= image_tag('cannavaro.gif') %>Cannavaro</span> <progress value="<%=cannavaro %>" max="100"></progress><span class="percentage"><%=cannavaro%>%</span><br>
+
+  </div>
+<div class="Midfielder">
+<span><%= image_tag('xavi.jpg') %>Xavi</span> <progress value="<%=xavi %>" max="100"></progress><span class="percentage"><%=xavi%>%</span><br>
+<span><%= image_tag('perlo.jpg') %>Perlo</span> <progress value="<%=perlo %>" max="100"></progress><span class="percentage"><%=perlo%>%</span><br>
+<span><%= image_tag('ballack.jpg') %>Michael Ballack</span> <progress value="<%=ballack %>" max="100"></progress><span class="percentage"><%=ballack%>%</span><br>
+<span><%= image_tag('inesta.jpg') %>Inesta</span> <progress value="<%=inesta %>" max="100"></progress><span class="percentage"><%=inesta%>%</span><br>
+<span><%= image_tag('alonso.jpg') %>Xabi Alonso</span> <progress value="<%=alonso %>" max="100"></progress><span class="percentage"><%=alonso%>%</span><br>
+<span><%= image_tag('luca.jpg') %>Luca Modric</span> <progress value="<%=modric %>" max="100"></progress><span class="percentage"><%=modric%>%</span><br>
+</div>
+<div class="Striker">
+  <span><%= image_tag('ronaldo.jpg') %>Ronaldo</span><progress value="<%= ronaldo %>" max="100"></progress><span class="percentage"><%=ronaldo%>%</span><br>
+  <span><%= image_tag('suarez.gif') %>suarez</span> <progress value="<%=suarez  %>" max="100"></progress><span class="percentage"><%=suarez%>%</span> <br>
+  <span><%= image_tag('Klosa.jpg') %>Klose</span> <progress value="<%= klose %>" max="100"></progress><span class="percentage"><%=klose%>%</span><br>
+  <span><%= image_tag('etoo.jpg') %>Etoo</span> <progress value="<%= etoo %>" max="100"></progress><span class="percentage"><%=etoo%>%</span><br>
+  <span><%= image_tag('villa.jpg') %>Villa</span> <progress value="<%= villa %>" max="100"></progress><span class="percentage"><%=villa%>%</span>
+</div>
+</div>
